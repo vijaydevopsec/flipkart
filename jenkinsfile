@@ -2,7 +2,7 @@
 properties([buildDiscarder(logRotator(artifactDaysToKeepStr: '', artifactNumToKeepStr: '', daysToKeepStr: '', numToKeepStr: '5'))])
 node{
     stage ('checkout'){
-      git branch: 'test', credentialsId: '8fcb4db8-8e6c-4df7-8762-c0336411ac68', url: 'https://github.com/vijaydevopsec/vijay.git'
+      git credentialsId: '8fcb4db8-8e6c-4df7-8762-c0336411ac68', url: 'https://github.com/vijaydevopsec/flipkart.git'
     }
     stage('build'){
      def mvnHOME = tool name: 'M2_HOME', type: 'maven'
